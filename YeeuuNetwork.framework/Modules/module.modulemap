@@ -1,0 +1,6 @@
+framework module YeeuuNetwork {
+  umbrella header "YeeuuNetwork.h"
+
+  export *
+  module * { export * }
+}
