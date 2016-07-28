@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YeeuuLock.h"
 
 @class YeeuuNetwork;
-@class YeeuuLock;
 
 typedef void(^YeeuuNetworkErr)(NSInteger errCode, id errMsg);
 typedef void(^YeeuuLocksResult)(NSArray<YeeuuLock*> *Data);
@@ -39,6 +39,6 @@ typedef void(^YeeuuOpenLockResult)(BOOL openSuccess, id msg);
  *  @param lid      锁id
  *  @param block    开锁结果
  */
--(void)OpenLockWithToken:(NSString*)token LockID:(NSString*)lid Success:(YeeuuOpenLockResult)block;
+-(void)OpenLockWithToken:(NSString*)token Lock:(YeeuuLock*)lock Success:(YeeuuOpenLockResult)block;
 
 @end
